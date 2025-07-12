@@ -3,9 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>qtitpc's life</title>
+    <!--link-->    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
-    <h1>qtitpc</h1>
+    <section class="full-screen-section intro">
+        <div style="display: flex; align-items: center; gap: 16px;">
+            <h1 id="mainTitle">Hi there, I'm Tùng!</h1>
+            
+        </div>
+        
+        <p>Welcome to my portfolio!</p>
+        <p>I'm 18 and my hearing is not good but I love tech so much!</p>
+        <div class="socials-row">
+            <a class="social-btn youtube" href="https://www.youtube.com/@dqt21107" target="_blank"><i class="fab fa-youtube"></i> Youtube</a>
+            <a class="social-btn facebook" href="https://www.facebook.com/dinhquangtung.user07" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a class="social-btn discord" href="https://discord.com/users/719765695516377098
+" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+            <a class="social-btn instagram" href="https://www.instagram.com/qtungthapvl/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a class="social-btn github" href="https://github.com/qtungnui07" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+        <div class="bg-music">
+            <p>nghe nhac neu muon chill</p>
+            <p>Title: <span id="songTitle">---</span></p>
+
+            <audio id="bgMusic" src=""></audio>
+
+            <div class="shell-controls">
+                <button id="playBtn">[ Play ]</button>
+                <button id="pauseBtn">[ Pause ]</button>
+                <button id="nextBtn">[ Next ]</button>
+                <span id="timeDisplay">0:00</span>
+            </div>
+            <div class="volume-control">
+                Volume: 
+                <span id="volumePercent" style="cursor:pointer;user-select:none;">50%</span>
+            </div>
+        </div>
+
+    </section>
+    <section class="full-screen-section info">
+        <div style="display: flex; align-items: flex-start; justify-content: center; gap: 80px; flex-wrap: wrap;">
+            <div style="flex: 1 1 400px; max-width: 600px;">
+                <h1 style="font-weight: bold; font-size: 2.5rem; margin-bottom: 24px;">Some infos about me:</h1>
+                <ul style="font-size: 1.15rem; line-height: 1.7;">
+                    <li>Update sau (luoi qua)</li>
+                </ul>
+            </div>
+            <div style="flex: 1 1 420px; display: flex; justify-content: center; align-items: center; min-width: 320px;">
+                <img src="assets/img/qtitpc.jpg" alt="qtitpc" style="width: 100%; max-width: 1020px; max-height: 720px; border-radius: 16px; box-shadow: 0 4px 32px rgba(0,0,0,0.12); object-fit: cover;">
+            </div>
+        </div>
+    </section>
+    <footer class="terminal-footer">
+        <div class="terminal-header">
+            <span class="user">qtitpc</span>@dqt <span class="path">~/Home</span> <span class="arrow">&gt;</span> <span class="folder">footer</span>
+        </div>
+        <div class="terminal-body">
+            <div>
+                <div class="copyright">© 2025 Dinh Quang Tung</div>
+            </div>
+            <div class="footer-icons">
+                <button id="darkModeBtn" class="footer-icon" title="Switch mode">🌙</button>
+                <a href="https://github.com/qtungnui07" target="_blank" class="footer-icon"><i class="fab fa-github"></i></a>
+                <a href="mailto:your@email.com" class="footer-icon"><i class="fa fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    
+    
+    
+    <!--smoothscroll-->
+    <script src="assets/smoothscroll/smooth-scroll.js"></script>
+
+    <!--music-->
+    <script src="assets/music/controlsmusic.js"></script>
+
+    <script>
+    const darkBtn = document.getElementById('darkModeBtn');
+    darkBtn.onclick = function() {
+        document.body.classList.toggle('dark-mode');
+        if(document.body.classList.contains('dark-mode')) {
+            darkBtn.innerHTML = '☀️';
+        } else {
+            darkBtn.innerHTML = '🌙';
+        }
+    };
+    </script>
+        
 </body>
 </html>
